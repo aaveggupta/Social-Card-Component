@@ -1,0 +1,168 @@
+// 'Inter' GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+// GENERIC
+
+$circle-size: 25rem;
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  // COLORS
+  --gradient-color-1: #7B70FF;
+  --gradient-color-2: #818EFF;
+  --gradient-color-3: #FFB4FF;
+  --gradient-color-4: #FFC5EB;
+  --primary-color: #463F9D;
+  --text-color: #5B53BC;
+  --white-color: #fff;
+
+  // FONTS
+  --body-font: 'Inter', 'sans-serif';
+  --font-bold: 600;
+  --font-regular: 400;
+  --normal-font-size: 1.7rem;
+  --smaller-font-size: 0.94rem;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  font-size: var(--smaller-font-size);
+  background-color:#fff;
+  background-image:  radial-gradient(at 70% 63%, hsla(321,100%,89%,1) 0, transparent 60%),
+  radial-gradient(at 70% 63%, hsla(321,100%,89%,1) 0, transparent 60%), 
+  radial-gradient(at 70% 20%, hsla(300,100%,85%,1) 0, transparent 60%), 
+  radial-gradient(at 70% 20%, hsla(300,100%,85%,1) 0, transparent 60%), 
+  radial-gradient(at 20% 80%, hsla(234,100%,75%,1) 0, transparent 60%),
+  radial-gradient(at 20% 14%, hsla(245,100%,72%,1) 0, transparent 60%), 
+  radial-gradient(at 20% 14%, hsla(245,100%,72%,1) 0, transparent 60%), 
+  radial-gradient(at 20% 80%, hsla(234,100%,75%,1) 0, transparent 60%);
+  background-repeat: no-repeat;
+  width: 100vw;
+}
+
+h1, p {
+  margin: 0;  
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+// CARD
+.card__section {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  width: 31rem;
+  padding: 3rem;
+  display: flex;
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.25);
+
+  @media screen and (max-width: 524px) {
+    flex-flow: column;
+    align-items: center;
+    width: 18rem;
+    padding: 2rem 2rem;
+  }
+
+  @media screen and (max-width: 314px) {
+    flex-flow: column;
+    align-items: center;
+    width: 14rem;
+    --normal-font-size: 1.6rem;
+    --smaller-font-size: 0.9rem;
+  }
+
+  &__img {
+    width: 11rem;
+    margin-right: 1.5rem;
+
+    @media screen and (max-width: 524px) {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    @media screen and (max-width: 524px) {
+      flex-flow: column;
+      align-items: center;
+    }
+  }
+
+  &__info {
+
+    @media screen and (max-width: 524px) {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+  }
+
+  &__name {
+    font-size: var(--normal-font-size);
+    margin-bottom: 0.4rem;
+  }
+
+  &__prof {
+    font-size: var(--smaller-font-size);
+  }
+
+  &__icons {
+    display: flex;
+    margin-top: 1.3rem;
+  }
+
+  &__icon-container-t {
+    background-color: var(--text-color);
+    padding: 0.5rem;
+    border-radius: 7px;
+    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  &__icon-container-t:hover {
+    background-color: var(--primary-color);
+  }
+
+  &__icon-container-i {
+    background-color: var(--text-color);
+    padding: 0.5rem;
+    border-radius: 7px;
+    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  &__icon-container-i:hover {
+    background-color: var(--primary-color);
+  }
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .card {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.219);  
+  }
+}
+
+
